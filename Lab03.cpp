@@ -3,6 +3,33 @@
 
 using namespace std;
 
+void task1();
+
+void task2();
+
+void task3();
+
+float x, y, r;
+
+int main()
+{
+    int menu;
+    cin >> menu;
+    switch (menu)
+    {
+        case 1 : task1(); break;
+
+        case 2 : task2(); break;
+
+        case 3 : task3(); break;
+
+        default : cout << "\nUnknown operation!"; 
+
+    }
+    return 0;
+
+}
+
 void task1()
 
 {
@@ -54,7 +81,7 @@ void task2()
 
     cout << "\n________Task 2 (35)________" << endl << endl;
     // Declaration:
-    float x, y, r; 
+    //float x, y, r; 
     cout << "Enter the radius r: ";
     cin >> r;
     
@@ -79,15 +106,27 @@ void task2()
     else {
         cout << "The point is outside of the specified areas." << endl;
     }
-
 }
 
-int main()
+void task3()
 {
-    task2();
-
     
+    // Обчислення площі
+    float sectorArea = M_PI * r * r / 4;
+    float triangleArea = r * r / 2;
+    float totalArea = sectorArea + triangleArea;
 
-     return 0;
+    // Обчислення периметра
+    float arcLength = M_PI * r / 2;
+    float totalPerimeter = arcLength + 2 * r;
 
+    // Виведення результатів
+    cout << "Area of the figure: " << totalArea << endl;
+    cout << "Perimeter of the figure: " << totalPerimeter << endl;
+    
 }
+
+
+
+
+
